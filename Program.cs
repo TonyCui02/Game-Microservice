@@ -1,4 +1,7 @@
-
+using Microsoft.AspNetCore.Authentication;
+using A2.Handler;
+using A2.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,17 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services
+    .AddAuthentication()
+    .AddScheme<AuthenticationSchemeOptions, A2AuthHandler>("A2Authentication", null);
+builder.Services.AddDbContext<A2DBContext>(
+    options => options.UseSqlite(builder.Configuration["A2DbConnection"])
+);
+builder.Services.AddScoped<IA2Repo, A2Repo>();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("UserOnly", policy => policy.RequireClaim("userName"));
+});
 
 var app = builder.Build();
 
@@ -20,6 +34,7 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

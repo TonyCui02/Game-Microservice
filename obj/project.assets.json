@@ -1366,23 +1366,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xye002\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\tonyc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xye002\\data\\work\\Teaching\\335\\asg\\2022\\A1\\A2-template\\A2.csproj",
+      "projectUniqueName": "C:\\projects\\A2-template\\A2.csproj",
       "projectName": "A2",
-      "projectPath": "C:\\Users\\xye002\\data\\work\\Teaching\\335\\asg\\2022\\A1\\A2-template\\A2.csproj",
-      "packagesPath": "C:\\Users\\xye002\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xye002\\data\\work\\Teaching\\335\\asg\\2022\\A1\\A2-template\\obj\\",
+      "projectPath": "C:\\projects\\A2-template\\A2.csproj",
+      "packagesPath": "C:\\Users\\tonyc\\.nuget\\packages\\",
+      "outputPath": "C:\\projects\\A2-template\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\xye002\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tonyc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1441,7 +1437,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
